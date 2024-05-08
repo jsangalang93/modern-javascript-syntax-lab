@@ -18,29 +18,29 @@ console.log(nums2);
 
 // Given the following array, use destructuring to pull out the first and second values and place them into variables. Log both variables.
 
-// const pizzaToppings = ['Pineapple', 'Olives', 'Anchovies'];
+const pizzaToppings = ['Pineapple', 'Olives', 'Anchovies'];
 
 // Your code here
 
-// const [firstTopping, secondTopping] = pizzaToppings;
+const [firstTopping, secondTopping] = pizzaToppings;
 
-// console.log(firstTopping, secondTopping);
-// console.log(pizzaToppings[0], pizzaToppings[1]);
+console.log(firstTopping, secondTopping);
+console.log(pizzaToppings[0], pizzaToppings[1]);
 
 // EXERCISE 3
 
 // Given the following object, use destructuring to create variables `make` and `model` that will hold the respective values.
 
-// const car = {
-//     make: 'Audi',
-//     model: 'q5',
-//   };
+const car = {
+    make: 'Audi',
+    model: 'q5',
+  };
   
   // Your code here
 
-// const { make, model } = car;
+const { make, model } = car;
 
-//   console.log(make, model);
+  console.log(make, model);
 
 //EXERCISE 4
 
@@ -91,7 +91,75 @@ console.log(propertyName);
 
 //EXERCISE 8
 
+// Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
 
-    
+// 1. `cat`
 
+// 2. `white`
+
+// The function should log a sentence 'The cat is white.' by default. The function should substitute the appropriate parameters when supplied arguments.
+
+// Your code here
+
+function petAdj(noun = 'cat', adjective = 'white') {
+    console.log(`The ${noun} is ${adjective}.`);
+};
+
+ petAdj();
+
+// EXERCISE 9
+
+// Convert the following `if...else` statement in to a ternary:
+
+let pizza = 'tasty';
+
+if (pizza === 'tasty') {
+  console.log('yum');
+} else {
+  console.log('yuck');
+}
+
+// Your code here
     
+    let pizza = tasty ? 'yum' : 'yuck';
+
+
+// EXERCISE 10
+
+// Simulated language configuration (change this variable to test)
+// const localLangConfig = null; // Change to 'es', 'fr', etc., or keep it null
+
+// Create a variable called LANG
+// Assign LANG the value of localLangConfig or 'en' as a default
+
+// Your code here
+
+const localLangConfig = 'fr';
+const LANG = localLangConfig || 'en';
+
+// Log the result
+console.log('Language setting:', LANG);
+
+// Simulated user theme preference (change this variable to test)
+const userSavedTheme = null; // Change to 'dark', 'contrast', etc., or keep it null
+
+// Create a variable called USER_THEME
+// Assign USER_THEME the value of userSavedTheme or 'light' as a default
+
+// Your code here
+const USER_THEME = userSavedTheme || 'light';
+
+// Log the result
+console.log('User theme setting:', USER_THEME);
+
+// EXERCISE 11
+
+// Now check for `cat.age` on `adventurer`. See how it errors out? Use optional chaining in a console.log that it returns undefined instead.
+
+const adventurer = {
+    name: 'Alice',
+  };
+  
+  let cat = adventurer.cat?.age;
+  
+  console.log(cat);
